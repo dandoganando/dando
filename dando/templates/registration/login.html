@@ -3,28 +3,29 @@
 {% block cuerpo %}
 <article>
 <div class="container">
-
-  <div class="row">
-	<div class="col-md-offset-4 col-md-4">
-		<h2>Ingreso</h2>
-		<form id="" method="POST" action="." role="form">
-		  {% csrf_token %}
-		  {% if error == True %}
-		    <p style="color:red">Usuario o contraseña equivocado.</p>
-		  {% endif %}
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Usuario</label>
-		    <input class="form-control" id="username" type="text" name="username" placeholder="Usuario">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Contraseña</label>
-		    <input class="form-control" type="password" id="password" name="password" placeholder="Contraseña">		    
-		  </div>
-		  <button  type="submit" value="Ingresar" class="btn btn-success">Ingresar</button>
-		  <input type="hidden" name="next" value="{% url 'home' %}" />
+	<div class="row">
+		<div class="col-md-offset-4 col-md-4">
+			<h2>Ingreso</h2>
+			<form id="" method="POST" action="." role="form">
+			  {% csrf_token %}
+			  {% if error == True %}
+			    <p style="color:red">Usuario o contraseña equivocado.</p>
+			  {% endif %}
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Usuario</label>
+			    <input class="form-control" id="username" type="text" name="username" placeholder="Usuario">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Contraseña</label>
+			    <input class="form-control" type="password" id="password" name="password" placeholder="Contraseña">		    
+			  </div>
+			  <button  type="submit" value="Ingresar" class="btn btn-success">Ingresar</button>
+			  <input type="hidden" name="next" value="{% url 'home' %}" />
+			</form>
 		</div>
-	  </div>
 	</div>
+</div>
+</article>
 {% endblock %}
 
 {% block js %}

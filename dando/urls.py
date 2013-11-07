@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.home', name='home'),
     url(r'^ingreso/$',  login, name='login'),
     url(r'^logout/$', logout, {'next_page':'/'}, name='logout'),
+    url(r'^registro/$', 'main.views.nuevo_usuario', name='registro'),
+
     # url(r'^$', 'dando.views.home', name='home'),
     # url(r'^dando/', include('dando.foo.urls')),
 
